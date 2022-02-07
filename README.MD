@@ -10,6 +10,7 @@
 * 0:13 npx create-react-app frontend
 * 0:17 npm start
 * 0:27 app component props
+* 0:30 states auth?
 * 0:35 components
 * 0:36 author item
 * 0:40 author list

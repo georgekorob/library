@@ -28,7 +28,7 @@ const AuthorList = ({authors}) => {
                 Last Name
             </th>
             <th>
-                Birthday year
+                Birth year
             </th>
             {authors.map((author) => <AuthorItem author={author}/>)}
         </table>
