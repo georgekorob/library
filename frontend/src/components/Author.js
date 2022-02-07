@@ -16,3 +16,24 @@ const AuthorItem = ({author}) => {
         </tr>
     )
 }
+
+
+const AuthorList = ({authors}) => {
+    return (
+        <table>
+            <th>
+                First name
+            </th>
+            <th>
+                Last Name
+            </th>
+            <th>
+                Birthday year
+            </th>
+            {authors.map((author) => <AuthorItem author={author}/>)}
+        </table>
+    )
+}
+
+
+export default AuthorList
