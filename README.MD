@@ -18,7 +18,8 @@
 * 1:06 after relax
 * 1:12 npm install axios | import in App
 * 1:16 axios get
-* 1:
+* 1:18 pip install django-cors-headers
+* 1:19 settings cors
 
 ## Задания 2
 1. С помощью create-react-app создать приложение для front-end-части проекта.
