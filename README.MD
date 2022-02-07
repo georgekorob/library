@@ -4,29 +4,28 @@
 
 Коробанов Георгий.
 
-## Урок 2. 
-* 0:00 start webinar
-* 0:11 install
-* 0:13 npx create-react-app frontend
-* 0:17 npm start
-* 0:27 app component props
-* 0:30 states auth?
-* 0:35 components
-* 0:36 author item
-* 0:40 author list
-* 0:48 componentDidMount
-* 1:06 after relax
-* 1:12 npm install axios | import in App
-* 1:16 axios get
-* 1:18 pip install django-cors-headers
-* 1:19 settings cors
-
-## Задания 2
-1. С помощью create-react-app создать приложение для front-end-части проекта.
-2. На React создать страницу для отображения списка пользователей из нескольких компонентов. Пока эта страница будет доступна всем, после разграничения прав и только для администратора. 
-3. Добавить на страницу компоненты Menu и Footer.
-4. В главном приложении получить данные обо всех пользователях и вывести их на странице.
-
+[comment]: <> (## Урок 2. )
+[comment]: <> (* 0:00 start webinar)
+[comment]: <> (* 0:11 install)
+[comment]: <> (* 0:13 npx create-react-app frontend)
+[comment]: <> (* 0:17 npm start)
+[comment]: <> (* 0:27 app component props)
+[comment]: <> (* 0:30 states auth?)
+[comment]: <> (* 0:35 components)
+[comment]: <> (* 0:36 author item)
+[comment]: <> (* 0:40 author list)
+[comment]: <> (* 0:48 componentDidMount)
+[comment]: <> (* 1:06 after relax)
+[comment]: <> (* 1:12 npm install axios | import in App)
+[comment]: <> (* 1:16 axios get)
+[comment]: <> (* 1:18 pip install django-cors-headers)
+[comment]: <> (* 1:19 settings cors)
+[comment]: <> (* 1:27 hw)
+[comment]: <> (## Задания 2)
+[comment]: <> (1. С помощью create-react-app создать приложение для front-end-части проекта.)
+[comment]: <> (2. На React создать страницу для отображения списка пользователей из нескольких компонентов. Пока эта страница будет доступна всем, после разграничения прав и только для администратора. )
+[comment]: <> (3. Добавить на страницу компоненты Menu и Footer.)
+[comment]: <> (4. В главном приложении получить данные обо всех пользователях и вывести их на странице.)
 [comment]: <> (## Урок 1. Введение в REST и Django REST Framework)
 [comment]: <> (* 1:24 install libs)
 [comment]: <> (* 1:28 add app rest_framework | startapp authors)

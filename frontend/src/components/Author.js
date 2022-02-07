@@ -11,7 +11,7 @@ const AuthorItem = ({author}) => {
                 {author.last_name}
             </td>
             <td>
-                {author.birthday_year}
+                {author.birth_year}
             </td>
         </tr>
     )
