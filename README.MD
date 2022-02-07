@@ -17,6 +17,7 @@
 * 0:48 componentDidMount
 * 1:06 after relax
 * 1:12 npm install axios | import in App
+* 1:16 axios get
 * 1:
 
 ## Задания 2
