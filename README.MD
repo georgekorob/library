@@ -14,8 +14,10 @@
 * 0:35 components
 * 0:36 author item
 * 0:40 author list
-* 0:47 pause
-* 0:
+* 0:48 componentDidMount
+* 1:06 after relax
+* 1:12 npm install axios | import in App
+* 1:
 
 ## Задания 2
 1. С помощью create-react-app создать приложение для front-end-части проекта.
