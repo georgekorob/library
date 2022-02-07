@@ -4,6 +4,24 @@
 
 Коробанов Георгий.
 
+## Урок 2. 
+* 0:00 37 start webinar
+* 0:11 install
+* 0:13 npx create-react-app frontend
+* 0:17 start
+* 0:27 app connect
+* 0:35 components
+* 0:36 author item
+* 0:40 author list
+* 0:47 pause
+* 0:
+
+## Задания 2
+1. С помощью create-react-app создать приложение для front-end-части проекта.
+2. На React создать страницу для отображения списка пользователей из нескольких компонентов. Пока эта страница будет доступна всем, после разграничения прав и только для администратора. 
+3. Добавить на страницу компоненты Menu и Footer.
+4. В главном приложении получить данные обо всех пользователях и вывести их на странице.
+
 [comment]: <> (## Урок 1. Введение в REST и Django REST Framework)
 [comment]: <> (* 1:24 install libs)
 [comment]: <> (* 1:28 add app rest_framework | startapp authors)
