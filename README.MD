@@ -5,11 +5,11 @@
 Коробанов Георгий.
 
 ## Урок 2. 
-* 0:00 37 start webinar
+* 0:00 start webinar
 * 0:11 install
 * 0:13 npx create-react-app frontend
-* 0:17 start
-* 0:27 app connect
+* 0:17 npm start
+* 0:27 app component props
 * 0:35 components
 * 0:36 author item
 * 0:40 author list
