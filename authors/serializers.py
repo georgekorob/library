@@ -10,12 +10,16 @@ class AuthorModelSerializer(ModelSerializer):
 
 
 class BiographyModelSerializer(ModelSerializer):
+    author = AuthorModelSerializer()
+
     class Meta:
         model = Biography
         fields = '__all__'
 
 
 class BookModelSerializer(ModelSerializer):
+    authors = serializers.StringRelatedField(many=True)
+
     class Meta:
         model = Book
         fields = '__all__'

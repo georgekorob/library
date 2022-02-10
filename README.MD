@@ -19,6 +19,7 @@
 * 1:11 serializers
 * 1:15 views
 * 1:17 urls
+* 1:19 serializers to view many authors
 
 ## Задания 3
 1. В проекте создать новое приложение для работы с TODO.
