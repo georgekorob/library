@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from rest_framework.serializers import ModelSerializer
+from rest_framework.serializers import ModelSerializer, HyperlinkedModelSerializer
 from .models import Author, Book, Biography
 
 
@@ -9,7 +9,7 @@ class AuthorModelSerializer(ModelSerializer):
         fields = '__all__'
 
 
-class BiographyModelSerializer(ModelSerializer):
+class BiographyModelSerializer(HyperlinkedModelSerializer):
     author = AuthorModelSerializer()
 
     class Meta:
