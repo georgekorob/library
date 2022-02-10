@@ -15,8 +15,9 @@
 * 0:50 relax
 * 1:01 test_serializers2
 * 1:05 many=True
-* 1:07 Author __str__ | models
-* 1:
+* 1:07 Author __str__ | models | migrations | manytomany in db
+* 1:11 serializers
+* 1:15 views
 
 ## Задания 3
 1. В проекте создать новое приложение для работы с TODO.
