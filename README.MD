@@ -18,7 +18,7 @@
 * 1:07 Author __str__ | models | migrations | manytomany in db
 * 1:11 serializers
 * 1:15 views
-* 1:
+* 1:17 urls
 
 ## Задания 3
 1. В проекте создать новое приложение для работы с TODO.
