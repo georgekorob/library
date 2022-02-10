@@ -21,7 +21,9 @@
 * 1:17 urls
 * 1:19 serializers to view many authors
 * 1:22 HyperlinkedModelSerializer
-* 1:
+* 1:27 settings renderer classes
+* 1:32 simple router
+* 1:34 hw
 
 ## Задания 3
 1. В проекте создать новое приложение для работы с TODO.
