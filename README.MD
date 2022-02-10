@@ -6,10 +6,17 @@
 
 
 ## Урок 3. Serializers. Renderers. Routers
-* 0:20 start webinar
-* 0:21 hw -1
-* 0:27 presume
-* 0:
+* 0:01 start webinar
+* 0:02 hw -1
+* 0:08 presume
+* 0:11 test_models
+* 0:12 test_serializers | configurations
+* 0:30 test_serializers1
+* 0:50 relax
+* 1:01 test_serializers2
+* 1:05 many=True
+* 1:07 Author __str__ | models
+* 1:
 
 ## Задания 3
 1. В проекте создать новое приложение для работы с TODO.
