@@ -60,6 +60,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+# ROOT_URLCONF = 'test_views.urls_example'
 ROOT_URLCONF = 'library.urls'
 
 TEMPLATES = [

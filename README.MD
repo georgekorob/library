@@ -4,36 +4,64 @@
 
 Коробанов Георгий.
 
+## Урок 4. Views. Filtering. Pagination
+* 0:01 start hw
+* 0:06 mixer
+* 0:09 camelCase
+* 0:10 views
+* 0:14 APIView -> Generic -> ModelViewSet
+* 0:22 func get APIView
+* 0:25 CreateAPIView mixins
+* 0:34 ViewSet
+* 0:40 only
+* 0:43 ModelViewSet
+* 0:47 relax 1:13
+* 0:57 Custom ViewSet
+* 1:02 filters
+* 1:06 kwargs filter
+* 1:09 query_params
+* 1:13 django_filters
+* 1:15 filterset_class
+* 1:17 paginations
+* 1:21 hw mixer
+* 1:23 hw +1
 
-## Урок 3. Serializers. Renderers. Routers
-* 0:01 start webinar
-* 0:02 hw -1
-* 0:08 presume
-* 0:11 test_models
-* 0:12 test_serializers | configurations
-* 0:30 test_serializers1
-* 0:50 relax
-* 1:01 test_serializers2
-* 1:05 many=True
-* 1:07 Author __str__ | models | migrations | manytomany in db
-* 1:11 serializers
-* 1:15 views
-* 1:17 urls
-* 1:19 serializers to view many authors
-* 1:22 HyperlinkedModelSerializer
-* 1:27 settings renderer classes
-* 1:32 simple router
-* 1:34 hw
+## Задания 4
+1. Установить размер страницы для всех api 100 записей. 
+2. Выбрать подходящий класс для постраничного вывода.
+3. В проекте доработать API следующим образом:
+   * модель User: есть возможность просмотра списка и каждого пользователя в отдельности, можно вносить изменения, нельзя удалять и создавать;
+   * модель Project: доступны все варианты запросов; для постраничного вывода установить размер страницы 10 записей; добавить фильтрацию по совпадению части названия проекта;
+   * модель ToDo: доступны все варианты запросов; при удалении не удалять ToDo, а выставлять признак, что оно закрыто; добавить фильтрацию по проекту; для постраничного вывода установить размер страницы 20.
+4. (Задание со *) В модели ToDo добавить фильтрацию по дате создания. Передадим 2 даты, дату начала и окончания (ссылка).
 
-## Задания 3
-1. В проекте создать новое приложение для работы с TODO.
-2. Добавить модель Project. Это проект, для которого записаны TODO. У него есть название, может быть ссылка на репозиторий и набор пользователей, которые работают с этим проектом. Создать модель, выбрать подходящие типы полей и связей с другими моделями.
-3. Добавить модель TODO. Это заметка. У ToDo есть проект, в котором сделана заметка, текст заметки, дата создания и обновления, пользователь, создавший заметку. Содержится и признак — активно TODO или закрыто. Выбрать подходящие типы полей и связей с другими моделями.
-4. Создать API для моделей Projects и ToDo. Пока можно использовать ViewSets по аналогии с моделью User.
-5. При сериализации моделей выбрать нужный вид для связанных моделей.
-6. (Задание со *) На стороне клиента используется camelCase в отличие от snake_case, который мы используем в python. Реализовать представление данных в виде camelCase (https://www.django-rest-framework.org/api-guide/parsers/#camelcase-json).
-7. &npm install react-bootstrap
-
+[comment]: <> (## Урок 3. Serializers. Renderers. Routers)
+[comment]: <> (* 0:01 start webinar)
+[comment]: <> (* 0:02 hw -1)
+[comment]: <> (* 0:08 presume)
+[comment]: <> (* 0:11 test_models)
+[comment]: <> (* 0:12 test_serializers | configurations)
+[comment]: <> (* 0:30 test_serializers1)
+[comment]: <> (* 0:50 relax)
+[comment]: <> (* 1:01 test_serializers2)
+[comment]: <> (* 1:05 many=True)
+[comment]: <> (* 1:07 Author __str__ | models | migrations | manytomany in db)
+[comment]: <> (* 1:11 serializers)
+[comment]: <> (* 1:15 views)
+[comment]: <> (* 1:17 urls)
+[comment]: <> (* 1:19 serializers to view many authors)
+[comment]: <> (* 1:22 HyperlinkedModelSerializer)
+[comment]: <> (* 1:27 settings renderer classes)
+[comment]: <> (* 1:32 simple router)
+[comment]: <> (* 1:34 hw)
+[comment]: <> (## Задания 3)
+[comment]: <> (1. В проекте создать новое приложение для работы с TODO.)
+[comment]: <> (2. Добавить модель Project. Это проект, для которого записаны TODO. У него есть название, может быть ссылка на репозиторий и набор пользователей, которые работают с этим проектом. Создать модель, выбрать подходящие типы полей и связей с другими моделями.)
+[comment]: <> (3. Добавить модель TODO. Это заметка. У ToDo есть проект, в котором сделана заметка, текст заметки, дата создания и обновления, пользователь, создавший заметку. Содержится и признак — активно TODO или закрыто. Выбрать подходящие типы полей и связей с другими моделями.)
+[comment]: <> (4. Создать API для моделей Projects и ToDo. Пока можно использовать ViewSets по аналогии с моделью User.)
+[comment]: <> (5. При сериализации моделей выбрать нужный вид для связанных моделей.)
+[comment]: <> (6. &#40;Задание со *&#41; На стороне клиента используется camelCase в отличие от snake_case, который мы используем в python. Реализовать представление данных в виде camelCase &#40;https://www.django-rest-framework.org/api-guide/parsers/#camelcase-json&#41;.)
+[comment]: <> (7. &npm install react-bootstrap)
 [comment]: <> (## Урок 2. Введение в React. Компонентный подход)
 [comment]: <> (* 0:00 start webinar)
 [comment]: <> (* 0:11 install)
