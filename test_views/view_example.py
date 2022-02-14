@@ -29,16 +29,16 @@ from authors.serializers import BookModelSerializer
 
 
 # #
-@api_view(['GET', 'POST'])  ##'POST'
-@renderer_classes([JSONRenderer, BrowsableAPIRenderer])
-def get(request):
-    if request.method == 'GET':
-        book = Book.objects.all()
-        serializer = BookModelSerializer(book, many=True)
-        # return Response(serializer.data)
-        return Response({'test': 1})  ###Дополнительный пример
-    elif request.method == 'POST':
-        pass
+# @api_view(['GET', 'POST'])  ##'POST'
+# @renderer_classes([JSONRenderer, BrowsableAPIRenderer])
+# def get(request):
+#     if request.method == 'GET':
+#         book = Book.objects.all()
+#         serializer = BookModelSerializer(book, many=True)
+#         # return Response(serializer.data)
+#         return Response({'test': 1})  ###Дополнительный пример
+#     elif request.method == 'POST':
+#         pass
 
 
 # level 2 Generic views
