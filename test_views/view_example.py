@@ -140,11 +140,11 @@ from authors.serializers import BookModelSerializer
 
 # DjangoFilter
 # filters.py ПОКАЗАТЬ НЕ ЗАБЫТЬ
-# class BookDjangoFilterViewSet(ModelViewSet):
-#    queryset = Book.objects.all()
-#    serializer_class = BookModelSerializer
-#    # filterset_fields = ['id','name']
-#    filterset_class = BookFilter
+class BookDjangoFilterViewSet(ModelViewSet):
+    queryset = Book.objects.all()
+    serializer_class = BookModelSerializer
+    # filterset_fields = ['id','name']
+    filterset_class = BookFilter
 
 
 # # #PAGINATOR

@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'django_filters',
     'authors',
     'corsheaders',
 ]
@@ -60,8 +61,8 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-# ROOT_URLCONF = 'test_views.urls_example'
-ROOT_URLCONF = 'library.urls'
+ROOT_URLCONF = 'test_views.urls_example'
+# ROOT_URLCONF = 'library.urls'
 
 TEMPLATES = [
     {

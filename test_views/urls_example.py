@@ -16,7 +16,7 @@ from rest_framework.routers import DefaultRouter, SimpleRouter
 from test_views.view_example import BookLimitOffsetPaginatonViewSet
 # from test_views.view_example import BookAPIView
 # from test_views.view_example import BookQuerysetFilterViewSet
-# from test_views.view_example import BookDjangoFilterViewSet
+from test_views.view_example import BookDjangoFilterViewSet
 
 router = DefaultRouter()
 # from test_views.view_example import BookModelViewSet
@@ -24,8 +24,8 @@ router = DefaultRouter()
 # router.register('book_f', BookModelViewSet)
 
 # router = SimpleRouter()
-# router.register('book_f', BookDjangoFilterViewSet)
-router.register('book_p', BookLimitOffsetPaginatonViewSet)
+router.register('book_f', BookDjangoFilterViewSet)
+# router.register('book_p', BookLimitOffsetPaginatonViewSet)
 # router.register('biography', BiographyViewSet)
 
 
@@ -71,7 +71,7 @@ urlpatterns = [
     # filter part_2
     # path('api/<str:name>/', BookListAPIView.as_view()),
     #
-    path('api/', include(router.urls)),
+    # path('api/', include(router.urls)),
 
 
 ]
