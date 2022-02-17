@@ -21,8 +21,8 @@ from authors.views import AuthorModelViewSet, BookModelViewSet, BiographyModelVi
 # router = SimpleRouter()
 router = DefaultRouter()
 router.register('authors', AuthorModelViewSet)
-router.register('book', BookModelViewSet)
-router.register('biography', BiographyModelViewSet)
+router.register('books', BookModelViewSet)
+router.register('biographies', BiographyModelViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),

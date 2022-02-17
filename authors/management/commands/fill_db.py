@@ -19,16 +19,26 @@ class Command(BaseCommand):
         Author.objects.all().delete()
         Biography.objects.all().delete()
         Book.objects.all().delete()
-        author1 = Author.objects.create(first_name='Фёдор', last_name='Достоевский', birth_year='1821')
-        author2 = Author.objects.create(first_name='Александр', last_name='Грин', birth_year='1880')
-        author3 = Author.objects.create(first_name='Михаил', last_name='Булгаков', birth_year='1891')
-        biography1 = Biography.objects.create(text='Текст биографии автора 1', author=author1)
-        biography2 = Biography.objects.create(text='Текст биографии автора 2', author=author2)
-        biography3 = Biography.objects.create(text='Текст биографии автора 3', author=author3)
-        book1 = Book.objects.create(name='Мастер и маргарита')
-        book1.authors.set([author3])
-        book2 = Book.objects.create(name='Война и мир')
-        book2.authors.set([author1, author2])
+        author1 = Author.objects.create(first_name='Александр', last_name='Грин', birth_year='1880')
+        author2 = Author.objects.create(first_name='Александр', last_name='Пушкин', birth_year='1799')
+        # authors = [author1, author2]
+        # author3 = Author.objects.create(first_name='Фёдор', last_name='Достоевский', birth_year='1821')
+        # author4 = Author.objects.create(first_name='Михаил', last_name='Булгаков', birth_year='1891')
+        # biography1 = Biography.objects.create(text='Текст биографии автора 1', author=author1)
+        # biography2 = Biography.objects.create(text='Текст биографии автора 2', author=author2)
+        # biography3 = Biography.objects.create(text='Текст биографии автора 3', author=author3)
+        # const book1 = {id: 1, name: 'Алые паруса', author: author1}
+        #     const book2 = {id: 2, name: 'Золотая цепь', author: author1}
+        #     const book3 = {id: 3, name: 'Пиковая дама', author: author2}
+        #     const book4 = {id: 4, name: 'Руслан и Людмила', author: author2}
+        book1 = Book.objects.create(name='Алые паруса')
+        book1.authors.set([author1])
+        book2 = Book.objects.create(name='Золотая цепь')
+        book2.authors.set([author1])
+        book3 = Book.objects.create(name='Пиковая дама')
+        book3.authors.set([author2])
+        book4 = Book.objects.create(name='Руслан и Людмила')
+        book4.authors.set([author2])
 
         # User.objects.all().delete()
         # for name in ['authapp']:
