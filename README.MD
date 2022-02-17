@@ -9,9 +9,7 @@
 * 0:53 hw -1
 * 1:03 webinar
 * 1:13 npm i react-router-dom@5.2.0
-* 1: Routing
-* 1: 
-* 1: HashRouter
+* 1:25 HashRouter
 * 1: 
 * : Link
 * : 
