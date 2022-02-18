@@ -33,6 +33,16 @@ class App extends React.Component {
     return (
         <div>
           <HashRouter>
+            <nav>
+              <ul>
+                <li>
+                  <Link to='/'>Authors</Link>
+                </li>
+                <li>
+                  <Link to='/books'>Books</Link>
+                </li>
+              </ul>
+            </nav>
             <Route exact path='/' component={() =><AuthorList authors={this.state.authors} />}/>
             <Route exact path='/books' component={() => <BookList books={this.state.books} />}/>
           </HashRouter>
