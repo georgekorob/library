@@ -4,24 +4,24 @@
 
 Коробанов Георгий.
 
-## Урок 5. Routing. SPA
-* 0:51 start
-* 0:53 hw -1
-* 1:03 webinar
-* 1:13 npm i react-router-dom@5.2.0
-* 1:25 HashRouter
-* 1: 
-* : Link
-* : 
-* : Switch
-* : 
-* : Redirect
-* : 
-* : Router с параметрами
-* : 
-* : BrowserRouter
-* : 
-* : hw
+## Урок 5. Routing. SPA 
+* 0:00 start 
+* 0:02 hw -1 
+* 0:12 webinar 
+* 0:22 npm i react-router-dom@5.2.0 
+* 0:35 HashRouter 
+* 0:41 BrowserRouter 
+* 0:44 nav | Link 
+* 0:50 notfound404 
+* 0:53 Switch 
+* 0:55 Redirect 
+* 1:08 after relax 
+* 1:11 link author name 
+* 1:13 useparams | Router с параметрами 
+* 1:24 hw 
+* 1:29 authorID 
+* 1:34 correct 
+* 1:37 load part of component
 
 ## Задания 5
 * Исправить ДЗ 4 в соответствии с исправлениями Пухова и Николая
