@@ -1,7 +1,7 @@
 import React from 'react'
 import {useParams} from "react-router-dom";
 
-const BookItem = ({book}) => {
+const BookItem = ({book, authors}) => {
     return (
         <tr>
             <td>
@@ -11,14 +11,16 @@ const BookItem = ({book}) => {
                 {book.name}
             </td>
             <td>
-                {book.authors}
+                {book.authors.map((authorID) => {
+                    return authors.find((author) => author.id === authorID).first_name
+                })}
             </td>
         </tr>
     )
 }
 
 
-const AuthorsBookList = ({books}) => {
+const AuthorsBookList = ({books, authors}) => {
 
     let {id} = useParams()
     console.log(id)
@@ -35,7 +37,7 @@ const AuthorsBookList = ({books}) => {
             <th>
                 Author
             </th>
-            {filteredItem.map((book) => <BookItem book={book}/>)}
+            {filteredItem.map((book) => <BookItem book={book} authors={authors}/>)}
         </table>
     )
 }
