@@ -5,7 +5,7 @@ import './App.css';
 import AuthorList from './components/Author.js';
 import BookList from "./components/Book.js";
 import NotFound404 from "./components/NotFound404";
-import {HashRouter, Route, BrowserRouter, Link, Switch} from "react-router-dom";
+import {HashRouter, Route, BrowserRouter, Link, Switch, Redirect} from "react-router-dom";
 
 const urlApi = 'http://127.0.0.1:8000/api/'
 
@@ -48,6 +48,7 @@ class App extends React.Component {
             <Switch>
               <Route exact path='/' component={() =><AuthorList authors={this.state.authors} />}/>
               <Route exact path='/books' component={() => <BookList books={this.state.books} />}/>
+              <Redirect from='/authors' to='/'/>
               <Route component={NotFound404}/>
             </Switch>
           </HashRouter>
