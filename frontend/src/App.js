@@ -47,7 +47,9 @@ class App extends React.Component {
               </ul>
             </nav>
             <Switch>
-              <Route exact path='/' component={() => <AuthorList authors={this.state.authors} />}/>
+              <Route exact path='/'>
+                <AuthorList authors={this.state.authors} />
+              </Route>
               <Route exact path='/books' component={() => <BookList books={this.state.books} />}/>
               <Route path='/author/:id'>
                 <AuthorsBookList books={this.state.books} authors={this.state.authors}/>

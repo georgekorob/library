@@ -19,28 +19,30 @@ const BookItem = ({book, authors}) => {
     )
 }
 
-
 const AuthorsBookList = ({books, authors}) => {
 
-    let {id} = useParams()
-    console.log(id)
-    let filteredItem = books.filter(book => book.authors.includes(parseInt(id)))
+    let {id} = useParams();
+    // console.log(id);
+    let filteredBooks = books.filter(book => book.authors.includes(+id));
 
     return (
         <table>
-            <th>
-                Id
-            </th>
-            <th>
-                Name
-            </th>
-            <th>
-                Author
-            </th>
-            {filteredItem.map((book) => <BookItem book={book} authors={authors}/>)}
+            <thead>
+                <th>
+                    Id
+                </th>
+                <th>
+                    Name
+                </th>
+                <th>
+                    Author
+                </th>
+            </thead>
+            <tbody>
+                {filteredBooks.map((book) => <BookItem book={book} authors={authors}/>)}
+            </tbody>
         </table>
     )
 }
-
 
 export default AuthorsBookList
