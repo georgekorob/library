@@ -6,6 +6,7 @@ import AuthorList from './components/Author.js';
 import BookList from "./components/Book.js";
 import {HashRouter, Route, BrowserRouter, Link} from "react-router-dom";
 
+const urlApi = 'http://127.0.0.1:8000/api/'
 
 class App extends React.Component {
   constructor(props) {
@@ -17,12 +18,12 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    axios.get('http://127.0.0.1:8000/api/authors/').then(response => {
+    axios.get(`${urlApi}authors/`).then(response => {
       this.setState({
         'authors': response.data
       })
     }).catch(error => console.log(error));
-    axios.get('http://127.0.0.1:8000/api/books/').then(response => {
+    axios.get(`${urlApi}books/`).then(response => {
       this.setState({
         'books': response.data
       })
