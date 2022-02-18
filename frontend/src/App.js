@@ -35,7 +35,7 @@ class App extends React.Component {
   render () {
     return (
         <div>
-          <HashRouter>
+          <BrowserRouter>
             <nav>
               <ul>
                 <li>
@@ -55,7 +55,7 @@ class App extends React.Component {
               <Redirect from='/authors' to='/'/>
               <Route component={NotFound404}/>
             </Switch>
-          </HashRouter>
+          </BrowserRouter>
         </div>
     )
   }
