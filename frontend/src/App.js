@@ -4,6 +4,7 @@ import axios from 'axios';
 import './App.css';
 import AuthorList from './components/Author.js';
 import BookList from "./components/Book.js";
+import {HashRouter, Route, BrowserRouter, Link} from "react-router-dom";
 
 
 class App extends React.Component {
@@ -31,8 +32,10 @@ class App extends React.Component {
   render () {
     return (
         <div>
-          <AuthorList authors={this.state.authors} />
-          <BookList booksboo={this.state.books} />
+          <HashRouter>
+            <Route exact path='/' component={() =><AuthorList authors={this.state.authors} />}/>
+            <Route exact path='/books' component={() => <BookList books={this.state.books} />}/>
+          </HashRouter>
         </div>
     )
   }
