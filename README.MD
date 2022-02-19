@@ -7,9 +7,9 @@
 ## Урок 6. Авторизация. Система прав
 * 14:07 start project
 * 14:11 author if first_name
-* 14:
-* 14:
-* :
+* 14:40 create groups
+* 14:56 relax 15:06
+* 15:
 * :
 * :
 * :
