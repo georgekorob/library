@@ -1,7 +1,13 @@
+from rest_framework.permissions import BasePermission, IsAdminUser
 from rest_framework.viewsets import ModelViewSet
 from .models import Author, Book, Biography
 from .serializers import AuthorModelSerializer, BiographyModelSerializer, BookModelSerializer
 from rest_framework.renderers import JSONRenderer, BrowsableAPIRenderer
+
+
+class StaffOnly(BasePermission):
+    def has_permission(self, request, view):
+        return request.user.is_staff
 
 
 # Create your views here.
@@ -10,6 +16,7 @@ from rest_framework.renderers import JSONRenderer, BrowsableAPIRenderer
 class AuthorModelViewSet(ModelViewSet):
     queryset = Author.objects.all()
     serializer_class = AuthorModelSerializer
+    # permission_classes = [IsAdminUser]
 
 
 class BiographyModelViewSet(ModelViewSet):

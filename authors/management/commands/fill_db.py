@@ -1,7 +1,7 @@
 import json
 import os
 
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User, Group
 from django.core.management import call_command
 from django.core.management.base import BaseCommand
 from authors.models import Author, Biography, Book
@@ -38,7 +38,12 @@ class Command(BaseCommand):
         User.objects.create_user(username='geekbrains',
                                  password='passfortest',
                                  email='georgekorob@gmail.com')
-
+        group1 = Group.objects.create(name='Администраторы')
+        group2 = Group.objects.create(name='Старшие сотрудники')
+        group3 = Group.objects.create(name='Младшие сотрудники')
+        usertest1 = User.objects.create_user(username='admintest', password='geekbrains', email='t@t.com')
+        usertest2 = User.objects.create_user(username='juniortest', password='geekbrains', email='t@t.com')
+        usertest3 = User.objects.create_user(username='seniortest', password='geekbrains', email='t@t.com')
         author1 = Author.objects.create(first_name='Александр', last_name='Грин', birth_year='1880')
         author2 = Author.objects.create(first_name='Александр', last_name='Пушкин', birth_year='1799')
         # authors = [author1, author2]
