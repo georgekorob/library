@@ -5,15 +5,20 @@
 Коробанов Георгий.
 
 ## Урок 6. Авторизация. Система прав
-* 14:07 start project
-* 14:11 author if first_name
-* 14:40 create groups
-* 14:56 relax 15:06
-* 15:
-* :
-* :
-* :
-* :
+* 0:11 start
+* 0:13 hw
+* 0:20 getProject(id)
+* 0:25 author if first_name
+* 0:31 lesson intro
+* 0:39 permissions is_authenticated is_admin
+* 0:44 StaffOnly | BasePermission
+* 0:49 DjangoModelPermissionsOrAnonReadOnly
+* 0:54 create groups
+* 1:11 relax 1:21
+* 1:23 authentication BasicAuthentication | token
+* 1:29 rest_framework.authtoken | migrate | urls | api-token-auth/ obtain_auth_token
+* 1:37 hw +1
+* 1:38 6 screen in zip
 
 ## Задания 6
 1. В проекте реализовать систему прав. 
