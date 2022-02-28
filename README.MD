@@ -3,33 +3,51 @@
 Репозиторий для сдачи домашнего задания.
 
 Коробанов Георгий.
+## Урок 7. Авторизация на стороне клиента
+* 0:06	start
+* 0:08	JWT
+* 0:21	intro
+* 0:34	Auth.js component
+* 0:54	get_token
+* 1:00	set_token
+* 1:05	npm install universal-cookie
+* 1:19	after relax
+* 1:26	is_auth
+* 1:41	logout
+* 1:47	hw
 
-## Урок 6. Авторизация. Система прав
-* 0:11 start
-* 0:13 hw
-* 0:20 getProject(id)
-* 0:25 author if first_name
-* 0:31 lesson intro
-* 0:39 permissions is_authenticated is_admin
-* 0:44 StaffOnly | BasePermission
-* 0:49 DjangoModelPermissionsOrAnonReadOnly
-* 0:54 create groups
-* 1:11 relax 1:21
-* 1:23 authentication BasicAuthentication | token
-* 1:29 rest_framework.authtoken | migrate | urls | api-token-auth/ obtain_auth_token
-* 1:37 hw +1
-* 1:38 6 screen in zip
+## Задания 7
+1. Создать компонент для авторизации с формой логина и пароля пользователя.
+2. При отправке формы получить токен пользователя.
+3. Сохранить токен пользователя в localStorage или cookies.
+4. Добавить кнопку logout («выйти»). По нажатию на неё очищать токен в localStorage или cookies.
+5. Прикладывать токен к последующим запросам.
+6. * На всех страницах отображать имя авторизованного пользователя и кнопку «Выйти», либо кнопку «Войти», если пользователь не авторизован.
 
-## Задания 6
-1. В проекте реализовать систему прав. 
-Есть 3 вида пользователей: администраторы, разработчики, владельцы проектов.
-* администраторы могут всё;
-* разработчики имеют все права на модель ToDo, могут просматривать модели Project и User;
-* владельцы проектов имеют права на просмотр модели User и все права на модель Project и ToDo.
-2. Добавить в проект базовую авторизацию.
-3. Добавить в проект авторизацию по токену.
-4. (Задание со *) Добавить в проект авторизацию по JWT токену: [ссылка](https://github.com/SimpleJWT/django-rest-framework-simplejwt).
-
+[comment]: <> (## Урок 6. Авторизация. Система прав)
+[comment]: <> (* 0:11 start)
+[comment]: <> (* 0:13 hw)
+[comment]: <> (* 0:20 getProject&#40;id&#41;)
+[comment]: <> (* 0:25 author if first_name)
+[comment]: <> (* 0:31 lesson intro)
+[comment]: <> (* 0:39 permissions is_authenticated is_admin)
+[comment]: <> (* 0:44 StaffOnly | BasePermission)
+[comment]: <> (* 0:49 DjangoModelPermissionsOrAnonReadOnly)
+[comment]: <> (* 0:54 create groups)
+[comment]: <> (* 1:11 relax 1:21)
+[comment]: <> (* 1:23 authentication BasicAuthentication | token)
+[comment]: <> (* 1:29 rest_framework.authtoken | migrate | urls | api-token-auth/ obtain_auth_token)
+[comment]: <> (* 1:37 hw +1)
+[comment]: <> (* 1:38 6 screen in zip)
+[comment]: <> (## Задания 6)
+[comment]: <> (1. В проекте реализовать систему прав. )
+[comment]: <> (Есть 3 вида пользователей: администраторы, разработчики, владельцы проектов.)
+[comment]: <> (* администраторы могут всё;)
+[comment]: <> (* разработчики имеют все права на модель ToDo, могут просматривать модели Project и User;)
+[comment]: <> (* владельцы проектов имеют права на просмотр модели User и все права на модель Project и ToDo.)
+[comment]: <> (2. Добавить в проект базовую авторизацию.)
+[comment]: <> (3. Добавить в проект авторизацию по токену.)
+[comment]: <> (4. &#40;Задание со *&#41; Добавить в проект авторизацию по JWT токену: [ссылка]&#40;https://github.com/SimpleJWT/django-rest-framework-simplejwt&#41;.)
 [comment]: <> (## Урок 5. Routing. SPA )
 [comment]: <> (* 0:00 start)
 [comment]: <> (* 0:02 hw -1)
