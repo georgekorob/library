@@ -20,6 +20,15 @@ class App extends React.Component {
     }
   }
 
+  get_token(username, password) {
+    axios.post('http://127.0.0.1:8001/api-token-auth/', {
+      username: username,
+      password: password
+    }).then(response => {
+      // this.set_token(response.data['token'])
+    }).catch(error => console.log(error))
+  }
+
   componentDidMount() {
     axios.get(`${urlApi}authors/`).then(response => {
       this.setState({
@@ -58,7 +67,9 @@ class App extends React.Component {
               <Route path='/author/:id'>
                 <AuthorsBookList books={this.state.books} authors={this.state.authors}/>
               </Route>
-              <Route exact path='/login' component={() => <LoginForm/>}/>
+              <Route exact path='/login'>
+                  <LoginForm get_token={(username, password) => this.get_token(username, password)}/>
+              </Route>
               <Redirect from='/authors' to='/'/>
               <Route component={NotFound404}/>
             </Switch>

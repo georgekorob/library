@@ -12,7 +12,7 @@
 * 0:41 handleSubmit
 * 0:44 import and Link
 * 0:45 Route
-* 0:54 get_token
+* 0:50 get_token
 * 1:00 set_token
 * 1:05 npm install universal-cookie
 * 1:19 after relax
