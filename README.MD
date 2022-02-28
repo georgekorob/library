@@ -4,17 +4,19 @@
 
 Коробанов Георгий.
 ## Урок 7. Авторизация на стороне клиента
-* 0:06	start
-* 0:08	JWT
-* 0:21	intro
-* 0:34	Auth.js component
-* 0:54	get_token
-* 1:00	set_token
-* 1:05	npm install universal-cookie
-* 1:19	after relax
-* 1:26	is_auth
-* 1:41	logout
-* 1:47	hw
+* 0:06 start
+* 0:08 JWT
+* 0:21 intro
+* 0:34 Auth.js component
+* 0:37 handleChange
+* 0:41 handleSubmit
+* 0:54 get_token
+* 1:00 set_token
+* 1:05 npm install universal-cookie
+* 1:19 after relax
+* 1:26 is_auth
+* 1:41 logout
+* 1:47 hw
 
 ## Задания 7
 1. Создать компонент для авторизации с формой логина и пароля пользователя.
