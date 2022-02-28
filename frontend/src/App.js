@@ -23,7 +23,16 @@ class App extends React.Component {
   }
 
   load_data(){
-
+    axios.get(`${urlApi}authors/`).then(response => {
+      this.setState({
+        'authors': response.data
+      })
+    }).catch(error => console.log(error));
+    axios.get(`${urlApi}books/`).then(response => {
+      this.setState({
+        'books': response.data
+      })
+    }).catch(error => console.log(error))
   }
 
   set_token(token) {
@@ -34,6 +43,12 @@ class App extends React.Component {
     // localStorage.setItem('token',token)
     // let token_ = localStorage.getItem('token')
     // document.cookie = `token=${token},username=...,password=...`
+  }
+
+  get_token_from_cookies(){
+    const cookies = new Cookies()
+    const token =  cookies.get('token')
+    this.setState({'token': token})
   }
 
   get_token(username, password) {
@@ -47,17 +62,8 @@ class App extends React.Component {
   }
 
   componentDidMount() {
+    this.get_token_from_cookies()
     this.load_data()
-    // axios.get(`${urlApi}authors/`).then(response => {
-    //   this.setState({
-    //     'authors': response.data
-    //   })
-    // }).catch(error => console.log(error));
-    // axios.get(`${urlApi}books/`).then(response => {
-    //   this.setState({
-    //     'books': response.data
-    //   })
-    // }).catch(error => console.log(error))
   }
 
   render () {

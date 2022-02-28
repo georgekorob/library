@@ -16,6 +16,7 @@
 * 1:00 set_token
 * 1:05 npm install universal-cookie
 * 1:19 after relax
+* 1:21 get_token_from_cookies
 * 1:26 is_auth
 * 1:41 logout
 * 1:47 hw
