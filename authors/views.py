@@ -1,3 +1,4 @@
+from rest_framework import permissions
 from rest_framework.permissions import BasePermission, IsAdminUser
 from rest_framework.viewsets import ModelViewSet
 from .models import Author, Book, Biography
@@ -25,5 +26,6 @@ class BiographyModelViewSet(ModelViewSet):
 
 
 class BookModelViewSet(ModelViewSet):
+    permission_classes = [permissions.IsAuthenticated]
     queryset = Book.objects.all()
     serializer_class = BookModelSerializer
