@@ -6,6 +6,7 @@ import AuthorList from './components/Author.js';
 import BookList from "./components/Book.js";
 import NotFound404 from "./components/NotFound404";
 import LoginForm from "./components/Auth";
+import Cookies from "universal-cookie";
 import {HashRouter, Route, BrowserRouter, Link, Switch, Redirect} from "react-router-dom";
 import AuthorsBookList from "./components/AuthorBooks";
 
@@ -17,29 +18,46 @@ class App extends React.Component {
     this.state = {
       'authors': [],
       'books': [],
+      'token': '',
     }
   }
 
+  load_data(){
+
+  }
+
+  set_token(token) {
+    const cookies = new Cookies()
+    cookies.set('token', token)
+    this.setState({'token': token},()=>this.load_data())
+    console.log(this.state.token)
+    // localStorage.setItem('token',token)
+    // let token_ = localStorage.getItem('token')
+    // document.cookie = `token=${token},username=...,password=...`
+  }
+
   get_token(username, password) {
-    axios.post('http://127.0.0.1:8001/api-token-auth/', {
+    axios.post('http://127.0.0.1:8000/api-token-auth/', {
       username: username,
       password: password
     }).then(response => {
-      // this.set_token(response.data['token'])
+      // console.log(response.data['token'])
+      this.set_token(response.data['token'])
     }).catch(error => console.log(error))
   }
 
   componentDidMount() {
-    axios.get(`${urlApi}authors/`).then(response => {
-      this.setState({
-        'authors': response.data
-      })
-    }).catch(error => console.log(error));
-    axios.get(`${urlApi}books/`).then(response => {
-      this.setState({
-        'books': response.data
-      })
-    }).catch(error => console.log(error))
+    this.load_data()
+    // axios.get(`${urlApi}authors/`).then(response => {
+    //   this.setState({
+    //     'authors': response.data
+    //   })
+    // }).catch(error => console.log(error));
+    // axios.get(`${urlApi}books/`).then(response => {
+    //   this.setState({
+    //     'books': response.data
+    //   })
+    // }).catch(error => console.log(error))
   }
 
   render () {
