@@ -5,6 +5,7 @@ import './App.css';
 import AuthorList from './components/Author.js';
 import BookList from "./components/Book.js";
 import NotFound404 from "./components/NotFound404";
+import LoginForm from "./components/Auth";
 import {HashRouter, Route, BrowserRouter, Link, Switch, Redirect} from "react-router-dom";
 import AuthorsBookList from "./components/AuthorBooks";
 
@@ -44,6 +45,9 @@ class App extends React.Component {
                 <li>
                   <Link to='/books'>Books</Link>
                 </li>
+                <li>
+                  <Link to='/login'>Login</Link>
+                </li>
               </ul>
             </nav>
             <Switch>
@@ -54,6 +58,7 @@ class App extends React.Component {
               <Route path='/author/:id'>
                 <AuthorsBookList books={this.state.books} authors={this.state.authors}/>
               </Route>
+              <Route exact path='/login' component={() => <LoginForm/>}/>
               <Redirect from='/authors' to='/'/>
               <Route component={NotFound404}/>
             </Switch>

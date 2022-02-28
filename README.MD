@@ -10,6 +10,8 @@
 * 0:34 Auth.js component
 * 0:37 handleChange
 * 0:41 handleSubmit
+* 0:44 import and Link
+* 0:45 Route
 * 0:54 get_token
 * 1:00 set_token
 * 1:05 npm install universal-cookie
