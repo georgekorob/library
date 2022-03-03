@@ -15,6 +15,9 @@
 * 0:58 APIClient
 * 1:06 login
 * 1:22 after relax
+* 1:23 APISimpleTestCase
+* 1:27 APITestCase get
+* 1:30 
 * 1:
 
 ## Задания 8

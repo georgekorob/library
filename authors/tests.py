@@ -77,14 +77,15 @@ class TestAuthorViewSet(TestCase):
 
         client.logout()
 
-# # APISimpleTestCase
-# class TestMath(APISimpleTestCase):
-#
-#     def test_sqrt(self):
-#         self.assertEqual(math.sqrt(4), 2)
-#
-#
-# # APITestCase
+
+# APISimpleTestCase
+class TestMath(APISimpleTestCase):
+
+    def test_sqrt(self):
+        self.assertEqual(math.sqrt(4), 2)
+
+
+# APITestCase
 # class TestBiography(APITestCase):
 #
 #     def setUp(self) -> None:
@@ -94,13 +95,13 @@ class TestAuthorViewSet(TestCase):
 #
 #         self.data = {'first_name': 'Александр', 'last_name': 'Пушкин', 'birth_year': 1799}
 #         self.data_put = {'first_name': 'Николай', 'last_name': 'Пушкин', 'birth_year': 1990}
-#         self.url = '/api/biography/'
+#         self.url = '/api/biographies/'
 #         self.admin = User.objects.create_superuser(self.name, self.email, self.password)
 #
 #     def test_get_list(self):
 #         response = self.client.get(self.url)
 #         self.assertEqual(response.status_code, status.HTTP_200_OK)
-#
+
 #     def test_put_admin(self):
 #         author = Author.objects.create(**self.data)
 #         bio = Biography.objects.create(text='test', author=author)
