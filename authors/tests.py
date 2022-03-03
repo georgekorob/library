@@ -50,12 +50,12 @@ class TestAuthorViewSet(TestCase):
         response = view(request)
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
 
-#     # APIClient
-#     def test_get_detail(self):
-#         client = APIClient()
-#         author = Author.objects.create(**self.data)
-#         response = client.get(f'{self.url}{author.id}/')
-#         self.assertEqual(response.status_code, status.HTTP_200_OK)
+    # APIClient
+    def test_get_detail(self):
+        client = APIClient()
+        author = Author.objects.create(**self.data)
+        response = client.get(f'{self.url}{author.id}/')
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
 #
 #     def test_put_guest(self):
 #         client = APIClient()

@@ -12,7 +12,8 @@
 * 0:34 setUp tearDown
 * 0:44 factory
 * 0:55 force_authenticate
-* 
+* 0:58 APIClient
+* 1:
 
 ## Задания 8
 1. Написать минимум один тест для API, используя APIRequestFactory.
