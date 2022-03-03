@@ -123,13 +123,13 @@ class TestBiography(APITestCase):
         self.assertEqual(bio_.text, 'Biography')
         self.client.logout()
 
-#     def test_put_mixer_fields(self):
-#         bio = mixer.blend(Biography, text='Биография')
-#         self.assertEqual(bio.text, 'Биография')
-#         self.client.login(username=self.name, password=self.password)
-#         response = self.client.put(f'{self.url}{bio.id}/', {'text': 'Biography', 'author': bio.author.id})
-#         self.assertEqual(response.status_code, status.HTTP_200_OK)
-#
-#         bio_ = Biography.objects.get(id=bio.id)
-#         self.assertEqual(bio_.text, 'Biography')
-#         self.client.logout()
+    def test_put_mixer_fields(self):
+        bio = mixer.blend(Biography, text='Биография')
+        self.assertEqual(bio.text, 'Биография')
+        self.client.login(username=self.name, password=self.password)
+        response = self.client.put(f'{self.url}{bio.id}/', {'text': 'Biography', 'author': bio.author.id})
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+
+        bio_ = Biography.objects.get(id=bio.id)
+        self.assertEqual(bio_.text, 'Biography')
+        self.client.logout()
