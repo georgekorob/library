@@ -17,7 +17,7 @@
 * 1:22 after relax
 * 1:23 APISimpleTestCase
 * 1:27 APITestCase get
-* 1:30 
+* 1:30 put_admin
 * 1:
 
 ## Задания 8
