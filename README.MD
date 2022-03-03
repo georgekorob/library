@@ -3,33 +3,45 @@
 Репозиторий для сдачи домашнего задания.
 
 Коробанов Георгий.
-## Урок 7. Авторизация на стороне клиента
-* 0:06 start
-* 0:08 JWT
-* 0:21 intro
-* 0:34 Auth.js component
-* 0:37 handleChange
-* 0:41 handleSubmit
-* 0:44 import and Link
-* 0:45 Route
-* 0:50 get_token
-* 1:00 set_token
-* 1:05 npm install universal-cookie
-* 1:19 after relax
-* 1:21 get_token_from_cookies
-* 1:23 get_headers
-* 1:26 is_auth
-* 1:41 logout
-* 1:47 hw
 
-## Задания 7
-1. Создать компонент для авторизации с формой логина и пароля пользователя.
-2. При отправке формы получить токен пользователя.
-3. Сохранить токен пользователя в localStorage или cookies.
-4. Добавить кнопку logout («выйти»). По нажатию на неё очищать токен в localStorage или cookies.
-5. Прикладывать токен к последующим запросам.
-6. * На всех страницах отображать имя авторизованного пользователя и кнопку «Выйти», либо кнопку «Войти», если пользователь не авторизован.
+## Урок 8.
+* 0:11 start web
+* 0:19 intro
+* 0:27 tests
+* 0:
 
+## Задания 8
+1. Написать минимум один тест для API, используя APIRequestFactory.
+2. Написать минимум один тест для API, используя APIClient.
+3. Написать минимум один тест для API, используя APITestCase.
+4. Данные для тестов удобно создавать, используя mixer.
+5. * Написать минимум один [Live test](https://www.django-rest-framework.org/api-guide/testing/#live-tests).
+
+[comment]: <> (## Урок 7. Авторизация на стороне клиента)
+[comment]: <> (* 0:06 start)
+[comment]: <> (* 0:08 JWT)
+[comment]: <> (* 0:21 intro)
+[comment]: <> (* 0:34 Auth.js component)
+[comment]: <> (* 0:37 handleChange)
+[comment]: <> (* 0:41 handleSubmit)
+[comment]: <> (* 0:44 import and Link)
+[comment]: <> (* 0:45 Route)
+[comment]: <> (* 0:50 get_token)
+[comment]: <> (* 1:00 set_token)
+[comment]: <> (* 1:05 npm install universal-cookie)
+[comment]: <> (* 1:19 after relax)
+[comment]: <> (* 1:21 get_token_from_cookies)
+[comment]: <> (* 1:23 get_headers)
+[comment]: <> (* 1:26 is_auth)
+[comment]: <> (* 1:41 logout)
+[comment]: <> (* 1:47 hw)
+[comment]: <> (## Задания 7)
+[comment]: <> (1. Создать компонент для авторизации с формой логина и пароля пользователя.)
+[comment]: <> (2. При отправке формы получить токен пользователя.)
+[comment]: <> (3. Сохранить токен пользователя в localStorage или cookies.)
+[comment]: <> (4. Добавить кнопку logout &#40;«выйти»&#41;. По нажатию на неё очищать токен в localStorage или cookies.)
+[comment]: <> (5. Прикладывать токен к последующим запросам.)
+[comment]: <> (6. * На всех страницах отображать имя авторизованного пользователя и кнопку «Выйти», либо кнопку «Войти», если пользователь не авторизован.)
 [comment]: <> (## Урок 6. Авторизация. Система прав)
 [comment]: <> (* 0:11 start)
 [comment]: <> (* 0:13 hw)
