@@ -18,7 +18,9 @@
 * 1:23 APISimpleTestCase
 * 1:27 APITestCase get
 * 1:30 put_admin
-* 1:
+* 2:00 put_mixer
+* 1: fields
+* hw
 
 ## Задания 8
 1. Написать минимум один тест для API, используя APIRequestFactory.
