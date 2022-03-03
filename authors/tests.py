@@ -56,31 +56,28 @@ class TestAuthorViewSet(TestCase):
         author = Author.objects.create(**self.data)
         response = client.get(f'{self.url}{author.id}/')
         self.assertEqual(response.status_code, status.HTTP_200_OK)
-#
-#     def test_put_guest(self):
-#         client = APIClient()
-#         author = Author.objects.create(**self.data)
-#         response = client.put(f'{self.url}{author.id}/', self.data_put)
-#         self.assertEqual(response.status_code, status.HTTP_401_UNAUTHORIZED)
-#
-#     def test_put_admin(self):
-#         client = APIClient()
-#         author = Author.objects.create(**self.data)
-#         client.login(username=self.name, password=self.password)
-#         response = client.put(f'{self.url}{author.id}/', self.data_put)
-#         self.assertEqual(response.status_code, status.HTTP_200_OK)
-#
-#         author_ = Author.objects.get(id=author.id)
-#         self.assertEqual(author_.first_name, self.data_put.get('first_name'))
-#         self.assertEqual(author_.last_name, self.data_put.get('last_name'))
-#         self.assertEqual(author_.birthday_year, self.data_put.get('birthday_year'))
-#
-#         client.logout()
-#
-#
-#     # APISimpleTestCase
-#
-#
+
+    def test_put_guest(self):
+        client = APIClient()
+        author = Author.objects.create(**self.data)
+        response = client.put(f'{self.url}{author.id}/', self.data_put)
+        self.assertEqual(response.status_code, status.HTTP_401_UNAUTHORIZED)
+
+    def test_put_admin(self):
+        client = APIClient()
+        author = Author.objects.create(**self.data)
+        client.login(username=self.name, password=self.password)
+        response = client.put(f'{self.url}{author.id}/', self.data_put)
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+
+        author_ = Author.objects.get(id=author.id)
+        self.assertEqual(author_.first_name, self.data_put.get('first_name'))
+        self.assertEqual(author_.last_name, self.data_put.get('last_name'))
+        self.assertEqual(author_.birth_year, self.data_put.get('birth_year'))
+
+        client.logout()
+
+# # APISimpleTestCase
 # class TestMath(APISimpleTestCase):
 #
 #     def test_sqrt(self):
@@ -95,8 +92,8 @@ class TestAuthorViewSet(TestCase):
 #         self.password = 'admin_123456789'
 #         self.email = 'admin_123456789@mail.ru'
 #
-#         self.data = {'first_name': 'Александр', 'last_name': 'Пушкин', 'birthday_year': 1799}
-#         self.data_put = {'first_name': 'Николай', 'last_name': 'Пушкин', 'birthday_year': 1990}
+#         self.data = {'first_name': 'Александр', 'last_name': 'Пушкин', 'birth_year': 1799}
+#         self.data_put = {'first_name': 'Николай', 'last_name': 'Пушкин', 'birth_year': 1990}
 #         self.url = '/api/biography/'
 #         self.admin = User.objects.create_superuser(self.name, self.email, self.password)
 #

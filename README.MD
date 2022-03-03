@@ -10,9 +10,11 @@
 * 0:27 tests
 * 0:32 TestCase
 * 0:34 setUp tearDown
-* 0:44 factory
+* 0:44 APIRequestFactory
 * 0:55 force_authenticate
 * 0:58 APIClient
+* 1:06 login
+* 1:22 after relax
 * 1:
 
 ## Задания 8
