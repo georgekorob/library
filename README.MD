@@ -8,7 +8,11 @@
 * 0:11 start web
 * 0:19 intro
 * 0:27 tests
-* 0:
+* 0:32 TestCase
+* 0:34 setUp tearDown
+* 0:44 factory
+* 0:55 force_authenticate
+* 
 
 ## Задания 8
 1. Написать минимум один тест для API, используя APIRequestFactory.
