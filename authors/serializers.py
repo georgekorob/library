@@ -31,7 +31,6 @@ class BookModelSerializer(ModelSerializer):
 
 
 class BookBaseSerializer(ModelSerializer):
-    # 10
     class Meta:
         model = Book
-        fields = '__all__'
+        fields = ('name',)

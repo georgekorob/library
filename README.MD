@@ -10,13 +10,15 @@
 * 0:37 intro
 * 0:47 python manage.py startapp userapp | settings | urls
 * 0:49 serializers | views
-* 0:58 UrlPathVersioning
-* 1:01 NamespaceVersioning
+* 0:58 UrlPathVersioning api/<str:version>/userlist/
+* 1:01 NamespaceVersioning api/userlist/v2/
 * 1:07 HostNameVersioning
-* 1:10 QueryParameterVersioning
-* 1: AcceptHeaderVersioning
-* 1: 
-* 1: hw
+* 1:10 QueryParameterVersioning api/authors/?version=v2
+* 1:14 AcceptHeaderVersioning
+* 1:19 relax
+* 1:30 docs
+* 1:
+* 1:45 hw
 
 ## Задания 9
 1. Создать новую версию API в проекте, в которой у модели пользователя будут доступны поля is_superuser, is_staff. Таким образом, проект будет поддерживать две версии API.
