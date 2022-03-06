@@ -4,31 +4,49 @@
 
 Коробанов Георгий.
 
-## Урок 8.
-* 0:11 start web
-* 0:19 intro
-* 0:27 tests
-* 0:32 TestCase
-* 0:34 setUp tearDown
-* 0:44 APIRequestFactory
-* 0:55 force_authenticate
-* 0:58 APIClient
-* 1:06 login
-* 1:22 after relax
-* 1:23 APISimpleTestCase
-* 1:27 APITestCase get
-* 1:30 put_admin
-* 2:00 put_mixer
-* 2:04 fields
-* 2:07 hw
+## Урок 9. Система версий API. Документация для API
+* 0:20 start
+* 0:22 jwt
+* 0:37 intro
+* 0:47 python manage.py startapp userapp | settings
+* 0: UrlPathVersioning
+* 0: 
+* 0: NamespaceVersioning
+* 0: 
+* 0: QueryParameterVersioning
+* 0: 
+* 0: AcceptHeaderVersioning
+* 0: 
+* 1: hw
 
-## Задания 8
-1. Написать минимум один тест для API, используя APIRequestFactory.
-2. Написать минимум один тест для API, используя APIClient.
-3. Написать минимум один тест для API, используя APITestCase.
-4. Данные для тестов удобно создавать, используя mixer.
-5. * Написать минимум один [Live test](https://www.django-rest-framework.org/api-guide/testing/#live-tests).
+## Задания 9
+1. Создать новую версию API в проекте, в которой у модели пользователя будут доступны поля is_superuser, is_staff. Таким образом, проект будет поддерживать две версии API.
+2. Создать документацию для API, используя drf-yasg.
+3. * Создать часть документации Swagger и/или ReDoc без использования сторонних библиотек. Можно использовать минимальные примеры из стандартной документации Swagger и ReDoc.
 
+[comment]: <> (## Урок 8. Тестирование API. Фабрики данных)
+[comment]: <> (* 0:11 start web)
+[comment]: <> (* 0:19 intro)
+[comment]: <> (* 0:27 tests)
+[comment]: <> (* 0:32 TestCase)
+[comment]: <> (* 0:34 setUp tearDown)
+[comment]: <> (* 0:44 APIRequestFactory)
+[comment]: <> (* 0:55 force_authenticate)
+[comment]: <> (* 0:58 APIClient)
+[comment]: <> (* 1:06 login)
+[comment]: <> (* 1:22 after relax)
+[comment]: <> (* 1:23 APISimpleTestCase)
+[comment]: <> (* 1:27 APITestCase get)
+[comment]: <> (* 1:30 put_admin)
+[comment]: <> (* 2:00 put_mixer)
+[comment]: <> (* 2:04 fields)
+[comment]: <> (* 2:07 hw)
+[comment]: <> (## Задания 8)
+[comment]: <> (1. Написать минимум один тест для API, используя APIRequestFactory.)
+[comment]: <> (2. Написать минимум один тест для API, используя APIClient.)
+[comment]: <> (3. Написать минимум один тест для API, используя APITestCase.)
+[comment]: <> (4. Данные для тестов удобно создавать, используя mixer.)
+[comment]: <> (5. * Написать минимум один [Live test]&#40;https://www.django-rest-framework.org/api-guide/testing/#live-tests&#41;.)
 [comment]: <> (## Урок 7. Авторизация на стороне клиента)
 [comment]: <> (* 0:06 start)
 [comment]: <> (* 0:08 JWT)
