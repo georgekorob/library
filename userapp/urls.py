@@ -1,7 +1,8 @@
-from django.contrib import admin
-from django.urls import path, include
+from django.urls import path, include, re_path
+from userapp.views import UserListAPIView
 
 app_name = 'userapp'
 urlpatterns = [
-    # path('/', admin.site.urls),
+    # re_path(r'^api/(?P<version>\d\.\d)/users/$', UserListAPIView.as_view()),
+    re_path(r'^api/(?P<version>\d)/users/$', UserListAPIView.as_view()),
 ]

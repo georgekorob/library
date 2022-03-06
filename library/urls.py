@@ -19,6 +19,7 @@ from rest_framework.authtoken.views import obtain_auth_token
 from rest_framework.routers import DefaultRouter, SimpleRouter
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView, TokenVerifyView
 from authors.views import AuthorModelViewSet, BookModelViewSet, BiographyModelViewSet
+from userapp.views import UserListAPIView
 
 # router = SimpleRouter()
 router = DefaultRouter()
@@ -34,4 +35,7 @@ urlpatterns = [
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     path('api/token/verify/', TokenVerifyView.as_view(), name='token_verify'),
+    # re_path(r'^api/(?P<version>\d\.\d)/users/$', UserListAPIView.as_view()),
+    # re_path(r'^api/(?P<version>\d)/users/$', UserListAPIView.as_view()),
+    path('api/<str:version>/users/', UserListAPIView.as_view()),
 ]
