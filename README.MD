@@ -12,9 +12,8 @@
 * 0:49 serializers | views
 * 0:58 UrlPathVersioning
 * 1:01 NamespaceVersioning
-* 1: 
-* 1: QueryParameterVersioning
-* 1: 
+* 1:07 HostNameVersioning
+* 1:10 QueryParameterVersioning
 * 1: AcceptHeaderVersioning
 * 1: 
 * 1: hw
