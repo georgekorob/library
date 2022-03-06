@@ -8,7 +8,8 @@
 * 0:20 start
 * 0:22 jwt
 * 0:37 intro
-* 0:47 python manage.py startapp userapp | settings
+* 0:47 python manage.py startapp userapp | settings | urls
+* 0:49 serializers
 * 0: UrlPathVersioning
 * 0: 
 * 0: NamespaceVersioning
