@@ -35,7 +35,10 @@ urlpatterns = [
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     path('api/token/verify/', TokenVerifyView.as_view(), name='token_verify'),
+
     # re_path(r'^api/(?P<version>\d\.\d)/userlist/$', UserListAPIView.as_view()),
     # re_path(r'^api/(?P<version>\d)/userlist/$', UserListAPIView.as_view()),
-    path('api/<str:version>/userlist/', UserListAPIView.as_view()),
+    # path('api/<str:version>/userlist/', UserListAPIView.as_view()),
+    path('api/userlist/v1/', include('userapp.urls', namespace='v1')),
+    path('api/userlist/v2/', include('userapp.urls', namespace='v2')),
 ]

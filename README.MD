@@ -11,13 +11,12 @@
 * 0:47 python manage.py startapp userapp | settings | urls
 * 0:49 serializers | views
 * 0:58 UrlPathVersioning
-* 0: 
-* 0: NamespaceVersioning
-* 0: 
-* 0: QueryParameterVersioning
-* 0: 
-* 0: AcceptHeaderVersioning
-* 0: 
+* 1:01 NamespaceVersioning
+* 1: 
+* 1: QueryParameterVersioning
+* 1: 
+* 1: AcceptHeaderVersioning
+* 1: 
 * 1: hw
 
 ## Задания 9
