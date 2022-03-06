@@ -15,11 +15,26 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from drf_yasg import openapi
+from drf_yasg.views import get_schema_view
+from rest_framework import permissions
 from rest_framework.authtoken.views import obtain_auth_token
 from rest_framework.routers import DefaultRouter, SimpleRouter
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView, TokenVerifyView
 from authors.views import AuthorModelViewSet, BookModelViewSet, BiographyModelViewSet
 from userapp.views import UserListAPIView
+
+schema_view = get_schema_view(
+    openapi.Info(
+        title='Library',
+        default_version='v2',
+        description='Project',
+        contact=openapi.Contact(email='test@mail.ru'),
+        license=openapi.License(name='ST License')
+    ),
+    public=True,
+    permission_classes=(permissions.AllowAny,)
+)
 
 # router = SimpleRouter()
 router = DefaultRouter()
@@ -36,9 +51,13 @@ urlpatterns = [
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     path('api/token/verify/', TokenVerifyView.as_view(), name='token_verify'),
 
+    # path('swagger<str:format>',schema_view.without_ui()),  # for json file
+    path('swagger/', schema_view.with_ui('swagger')),
+    path('redoc/', schema_view.with_ui('redoc')),
+
     # re_path(r'^api/(?P<version>\d\.\d)/userlist/$', UserListAPIView.as_view()),
     # re_path(r'^api/(?P<version>\d)/userlist/$', UserListAPIView.as_view()),
     # path('api/<str:version>/userlist/', UserListAPIView.as_view()),
-    path('api/userlist/v1/', include('userapp.urls', namespace='v1')),
-    path('api/userlist/v2/', include('userapp.urls', namespace='v2')),
+    # path('api/userlist/v1/', include('userapp.urls', namespace='v1')),
+    # path('api/userlist/v2/', include('userapp.urls', namespace='v2')),
 ]

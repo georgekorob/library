@@ -17,7 +17,8 @@
 * 1:14 AcceptHeaderVersioning
 * 1:19 relax
 * 1:30 docs
-* 1:
+* 1:31 pip install drf-yasg | settings
+* 1:37 swagger | redoc
 * 1:45 hw
 
 ## Задания 9
