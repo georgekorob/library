@@ -4,28 +4,46 @@
 
 Коробанов Георгий.
 
-## Урок 9. Система версий API. Документация для API
-* 0:20 start
-* 0:22 jwt
-* 0:37 intro
-* 0:47 python manage.py startapp userapp | settings | urls
-* 0:49 serializers | views
-* 0:58 UrlPathVersioning api/<str:version>/userlist/
-* 1:01 NamespaceVersioning api/userlist/v2/
-* 1:07 HostNameVersioning
-* 1:10 QueryParameterVersioning api/authors/?version=v2
-* 1:14 AcceptHeaderVersioning
-* 1:19 relax
-* 1:30 docs
-* 1:31 pip install drf-yasg | settings
-* 1:37 swagger | redoc
-* 1:45 hw
+## Урок 10. GraphQl
+* 0:13 start web
+* 0:28 pip install
+* 0:33 schema
+* 0:46 string
+* 0:48 list author
+* 0:57 queryset related
+* 1:04 filter
+* 1:20 relax
+* 1:28 after relax
+* 1:29 update mutations
+* 1:37 create
+* 1:40 delete
+* 1:43 frontend query
+* 1:47 hw
 
-## Задания 9
-1. Создать новую версию API в проекте, в которой у модели пользователя будут доступны поля is_superuser, is_staff. Таким образом, проект будет поддерживать две версии API.
-2. Создать документацию для API, используя drf-yasg.
-3. * Создать часть документации Swagger и/или ReDoc без использования сторонних библиотек. Можно использовать минимальные примеры из стандартной документации Swagger и ReDoc.
+## Задания 10
+1. С помощью GraphQL создать схему, которая позволит одновременно получать ToDo, проекты и пользователей, связанных с проектом.
+2. *Подумать, какие ещё гибкие запросы могут быть полезны для этой системы, реализовать некоторые из них с помощью GraphQL.
 
+[comment]: <> (## Урок 9. Система версий API. Документация для API)
+[comment]: <> (* 0:20 start)
+[comment]: <> (* 0:22 jwt)
+[comment]: <> (* 0:37 intro)
+[comment]: <> (* 0:47 python manage.py startapp userapp | settings | urls)
+[comment]: <> (* 0:49 serializers | views)
+[comment]: <> (* 0:58 UrlPathVersioning api/<str:version>/userlist/)
+[comment]: <> (* 1:01 NamespaceVersioning api/userlist/v2/)
+[comment]: <> (* 1:07 HostNameVersioning)
+[comment]: <> (* 1:10 QueryParameterVersioning api/authors/?version=v2)
+[comment]: <> (* 1:14 AcceptHeaderVersioning)
+[comment]: <> (* 1:19 relax)
+[comment]: <> (* 1:30 docs)
+[comment]: <> (* 1:31 pip install drf-yasg | settings)
+[comment]: <> (* 1:37 swagger | redoc)
+[comment]: <> (* 1:45 hw)
+[comment]: <> (## Задания 9)
+[comment]: <> (1. Создать новую версию API в проекте, в которой у модели пользователя будут доступны поля is_superuser, is_staff. Таким образом, проект будет поддерживать две версии API.)
+[comment]: <> (2. Создать документацию для API, используя drf-yasg.)
+[comment]: <> (3. * Создать часть документации Swagger и/или ReDoc без использования сторонних библиотек. Можно использовать минимальные примеры из стандартной документации Swagger и ReDoc.)
 [comment]: <> (## Урок 8. Тестирование API. Фабрики данных)
 [comment]: <> (* 0:11 start web)
 [comment]: <> (* 0:19 intro)
