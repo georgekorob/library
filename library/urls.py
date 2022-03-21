@@ -62,5 +62,5 @@ urlpatterns = [
     # path('api/userlist/v1/', include('userapp.urls', namespace='v1')),
     # path('api/userlist/v2/', include('userapp.urls', namespace='v2')),
 
-    path('graphql/', GraphQLView.as_view(graphql=True)),
+    path('graphql/', GraphQLView.as_view(graphiql=True)),
 ]
