@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from drf_yasg import openapi
 from drf_yasg.views import get_schema_view
+from graphene_django.views import GraphQLView
 from rest_framework import permissions
 from rest_framework.authtoken.views import obtain_auth_token
 from rest_framework.routers import DefaultRouter, SimpleRouter
@@ -60,4 +61,6 @@ urlpatterns = [
     # path('api/<str:version>/userlist/', UserListAPIView.as_view()),
     # path('api/userlist/v1/', include('userapp.urls', namespace='v1')),
     # path('api/userlist/v2/', include('userapp.urls', namespace='v2')),
+
+    path('graphql/', GraphQLView.as_view(graphql=True)),
 ]
