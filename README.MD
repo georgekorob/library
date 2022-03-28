@@ -4,26 +4,43 @@
 
 Коробанов Георгий.
 
-## Урок 10. GraphQl
-* 0:13 start web
-* 0:28 pip install
-* 0:33 schema
-* 0:46 string
-* 0:48 list author
-* 0:57 queryset related
-* 1:04 filter
-* 1:20 relax
-* 1:28 after relax
-* 1:29 update mutations
-* 1:37 create
-* 1:40 delete
-* 1:43 frontend query
-* 1:47 hw
+## Урок 11. Работа с формами. Сборка проекта для production
+* 0:10 start web
+* 0:21 button delete
+* 0:38 create bookForm
+* 1:02 author select
+* 1:14 relax
+* 1:25 run build
+* 1:37 dirs frontend build
+* 1:48 correct
+* 1:52 hw
 
-## Задания 10
-1. С помощью GraphQL создать схему, которая позволит одновременно получать ToDo, проекты и пользователей, связанных с проектом.
-2. *Подумать, какие ещё гибкие запросы могут быть полезны для этой системы, реализовать некоторые из них с помощью GraphQL.
+## Задания 11
+1. В проекте добавить возможность создавать и удалять проекты.
+2. Добавить возможность создавать и удалять ToDo.
+3. Добавить поиск по части названия проекта.
+4. Все запросы на сервер рекомендуется делать в главном приложении.
+5. Для взаимодействия с главным приложением передавать callback.
+6. * Добавить возможность изменять проекты
 
+[comment]: <> (## Урок 10. GraphQl)
+[comment]: <> (* 0:13 start web)
+[comment]: <> (* 0:28 pip install)
+[comment]: <> (* 0:33 schema)
+[comment]: <> (* 0:46 string)
+[comment]: <> (* 0:48 list author)
+[comment]: <> (* 0:57 queryset related)
+[comment]: <> (* 1:04 filter)
+[comment]: <> (* 1:20 relax)
+[comment]: <> (* 1:28 after relax)
+[comment]: <> (* 1:29 update mutations)
+[comment]: <> (* 1:37 create)
+[comment]: <> (* 1:40 delete)
+[comment]: <> (* 1:43 frontend query)
+[comment]: <> (* 1:47 hw)
+[comment]: <> (## Задания 10)
+[comment]: <> (1. С помощью GraphQL создать схему, которая позволит одновременно получать ToDo, проекты и пользователей, связанных с проектом.)
+[comment]: <> (2. *Подумать, какие ещё гибкие запросы могут быть полезны для этой системы, реализовать некоторые из них с помощью GraphQL.)
 [comment]: <> (## Урок 9. Система версий API. Документация для API)
 [comment]: <> (* 0:20 start)
 [comment]: <> (* 0:22 jwt)
