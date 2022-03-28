@@ -11,12 +11,15 @@ const BookItem = ({book, authors}) => {
                 {book.name}
             </td>
             <td>
-                {book.authors.map((authorID) => {
+                <div>{book.authors.map((authorID) => {
                     let author = authors.find((author) => author.id === authorID);
                     if(author) {
-                        return author.first_name
+                        return <div key={authorID}>{author.first_name} {author.last_name}</div>
                     }
-                })}
+                    else {
+                        return null
+                    }
+                })}</div>
             </td>
         </tr>
     )
@@ -38,11 +41,11 @@ const AuthorsBookList = ({books, authors}) => {
                     Name
                 </th>
                 <th>
-                    Author
+                    Authors
                 </th>
             </thead>
             <tbody>
-                {filteredBooks.map((book) => <BookItem book={book} authors={authors}/>)}
+                {filteredBooks.map((book) => <BookItem key={book.id} book={book} authors={authors}/>)}
             </tbody>
         </table>
     )

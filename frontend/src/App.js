@@ -22,6 +22,23 @@ class App extends React.Component {
         }
     }
 
+    deleteBook(id){
+        const headers = this.get_headers()
+        axios.delete(`${urlApi}books/${id}`,{headers}).then(response => {
+            axios.get(`${urlApi}books/`, {headers}).then(response => {
+                this.setState({
+                    'books': response.data
+                })
+            }).catch(error => {
+                console.log(error)
+                this.setState({'books': []})
+            });
+        }).catch(error => {
+            console.log(error)
+            this.setState({books: []})
+        })
+    }
+
     get_token(username, password) {
         axios.post('http://127.0.0.1:8000/api-token-auth/', {
             username: username,
@@ -109,7 +126,9 @@ class App extends React.Component {
                         <Route exact path='/'>
                             <AuthorList authors={this.state.authors}/>
                         </Route>
-                        <Route exact path='/books' component={() => <BookList books={this.state.books}/>}/>
+                        <Route exact path='/books' component={() =>
+                            <BookList books={this.state.books} deleteBook={(id)=> this.deleteBook(id)}/>
+                        }/>
                         <Route path='/author/:id'>
                             <AuthorsBookList books={this.state.books} authors={this.state.authors}/>
                         </Route>

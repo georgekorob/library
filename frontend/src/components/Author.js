@@ -21,18 +21,20 @@ const AuthorList = ({authors}) => {
     return (
         <table>
             <thead>
-                <th>
-                    First name
-                </th>
-                <th>
-                    Last Name
-                </th>
-                <th>
-                    Birth year
-                </th>
+                <tr>
+                    <th>
+                        First name
+                    </th>
+                    <th>
+                        Last Name
+                    </th>
+                    <th>
+                        Birth year
+                    </th>
+                </tr>
             </thead>
             <tbody>
-                {authors.map((author) => <AuthorItem author={author}/>)}
+                {authors.map((author) => <AuthorItem key={author.id} author={author}/>)}
             </tbody>
         </table>
     )
