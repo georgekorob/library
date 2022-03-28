@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from "react-router-dom";
 
 const BookItem = ({book, deleteBook}) => {
     return (
@@ -21,29 +22,32 @@ const BookItem = ({book, deleteBook}) => {
 
 const BookList = ({books, deleteBook}) => {
     return (
-        <table>
-            <thead>
-                <tr>
-                    <th>
-                        Id
-                    </th>
-                    <th>
-                        Name
-                    </th>
-                    <th>
-                        Author
-                    </th>
-                    <th>
-                        Delete
-                    </th>
-                </tr>
-            </thead>
-            <tbody>
-                {books.map((book) =>
-                    <BookItem book={book} key={book.id} deleteBook={deleteBook}/>
-                )}
-            </tbody>
-        </table>
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>
+                            Id
+                        </th>
+                        <th>
+                            Name
+                        </th>
+                        <th>
+                            Author
+                        </th>
+                        <th>
+                            Delete
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {books.map((book) =>
+                        <BookItem book={book} key={book.id} deleteBook={deleteBook}/>
+                    )}
+                </tbody>
+            </table>
+            <Link to='/books/create'>Create</Link>
+        </div>
     )
 }
 

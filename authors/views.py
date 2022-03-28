@@ -37,6 +37,6 @@ class BookModelViewSet(ModelViewSet):
     # serializer_class = BookModelSerializer
 
     def get_serializer_class(self):
-        if self.request.method in ['GET']:
+        if self.request.method in ['GET', 'POST']:
             return BookModelSerializer
         return BookBaseSerializer
